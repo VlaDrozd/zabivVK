@@ -13,7 +13,7 @@ const rl = readline.createInterface({
 async function setTimer(vk) {
   setTimeout(async () => {
     let response = await vk.call("messages.send", {
-      peer_id: 20000000 + config.get("conversation"),
+      peer_id: 20000000 + config.get("conversationID"),
       message: config.get("message"),
       random_id: easyvk.randomId(),
     });
